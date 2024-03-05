@@ -1,0 +1,36 @@
+<head>
+    <link rel="stylesheet" href="css/post.css">
+</head>
+
+<div class="box">
+    <div class="profile">
+        <figure>
+            <img src='<%= pic %>' >
+        </figure>
+        <div class="user-data">
+            <h3><%= username %></h3>
+            <p>Added <%= num %> Photos</p>
+        </div>
+    </div>
+
+    <h4><a href=""><%= desc %></a></h4>
+
+    <figure class="post-images">
+        <picture>
+            <img src='<%= firstImg %>' >
+            <div class="post-like">
+                <img src="img/like.svg" >
+                1 Like
+            </div>
+        </picture>
+        <picture>
+            <img src='<%= secImg %>' >
+            <div class="post-like">
+                <img src="img/like.svg" >
+                1 Like
+            </div>
+        </picture>
+    </figure>
+
+    <a href="">See all <%= totalPic %> photos</a>
+</div>

@@ -1,0 +1,137 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 40px 10px 40px;
+  position: relative;
+  z-index: 10;
+}
+
+@media screen and (max-width: 1200px) {
+  nav {
+    padding: 25px 20px 10px 20px;
+  }
+}
+
+nav .logo {
+  margin-inline-end: 50px;
+}
+
+@media screen and (max-width: 1400px) {
+  nav .logo {
+    margin-inline-end: 20px;
+  }
+}
+
+nav .search {
+  width: 750px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-radius: 5px;
+  padding: 14px 20px;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1600px) {
+  nav .search {
+    flex-grow: 1;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  nav .search {
+    width: 650px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  nav .search {
+    width: 570px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  nav .search {
+    width: 500px;
+  }
+}
+
+nav .search input {
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-size: 16px;
+  width: 100%;
+}
+
+nav .search input:nth-child(2) {
+  padding-inline-start: 15px;
+  border-left: 3px solid #ddd;
+  -webkit-text-fill-color: black;
+}
+
+nav .search input:focus {
+  outline: none;
+}
+
+nav .search img {
+  padding: 13px;
+  background-color: var(--red);
+  position: absolute;
+  right: 00px;
+  cursor: pointer;
+}
+
+nav .links {
+  display: flex;
+  justify-content: center;
+}
+
+nav .links a {
+  padding: 10px 14px;
+  margin-inline: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 5px;
+}
+
+nav .links a:hover {
+  background-color: #ffffff35;
+}
+
+nav .buttons button {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px 15px;
+  transition: background-color ease 0.5s;
+  cursor: pointer;
+}
+
+nav .buttons :nth-child(1) {
+  background-color: transparent;
+  border: 1px solid white;
+  margin-inline-end: 7px;
+}
+
+nav .buttons :nth-child(1):hover {
+  background-color: #ffffff66;
+}
+
+nav .buttons :nth-child(2) {
+  background-color: var(--red);
+  border: 1px solid var(--red);
+}
+
+nav .buttons :nth-child(2):hover {
+  background-color: red;
+}

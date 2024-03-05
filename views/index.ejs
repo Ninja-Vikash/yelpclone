@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants, Dentists, Bars, Beauty Salons, Doctors - Yelp</title>
+    <link rel="shortcut icon" href="favicon.io.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+</head>
+<body>
+    <main>
+        <div class="main" id="background">
+            <div class="layer"></div>
+            <header>
+                <%- include('navbar'); -%>
+                <%- include('navlinks'); -%>
+            </header>
+
+            <section class="hero z-2">
+                <div class="lines">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+
+                <div class="headline">
+                    <h1 id="heading">Nothing like a new <br>coat of paint</h1>
+                    <button id="heading-btn">
+                        <img src="img/search.svg" >
+                        Painters
+                    </button>
+                    <p id="description">Carlos' Painting & Handyman <br>
+                        <span>Photo by <span>Ginger C.</span></span>
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <section class="activity">
+            <h2>This is activity</h2>
+
+            <div class="activity-box-area">
+                <%- include('post', {'username' : 'Ninja Vikash', 'pic': 'img/post-img/profile.jpg', 'num': 3, 'desc': 'Spicy fastfood', 'firstImg': 'img/post-img/01.webp', 'secImg': 'img/post-img/02.jpg', 'totalPic': 13}); -%>
+                <%- include('review', {'username' : 'Serena Blackwood', 'pic': 'img/post-img/profile2.avif', 'desc': 'Taste Temptations', 'reviewImg': 'img/post-img/review01.avif'}); -%>
+                <%- include('post', {'username' : 'Ethan Gallagher', 'pic': 'img/post-img/profile1.avif', 'num': 6, 'desc': 'Gourmet Galore', 'firstImg': 'img/post-img/03.jpg', 'secImg': 'img/post-img/04.webp', 'totalPic': 21}); -%>
+                <%- include('review', {'username' : 'Maya Patel', 'pic': 'img/post-img/profile4.avif', 'desc': 'Flavor Fusion', 'reviewImg': 'img/post-img/review02.avif'}); -%>
+                <%- include('post', {'username' : 'Oliver Montgomery', 'pic': 'img/post-img/profile5.avif', 'num': 2, 'desc': 'Tasty Travels', 'firstImg': 'img/post-img/05.avif', 'secImg': 'img/post-img/06.avif', 'totalPic': 19}); -%>
+                <%- include('post', {'username' : 'Harper Thompson', 'pic': 'img/post-img/profile6.avif', 'num': 2, 'desc': 'Palate Pleasures', 'firstImg': 'img/post-img/07.avif', 'secImg': 'img/post-img/08.avif', 'totalPic': 5}); -%>
+                <%- include('post', {'username' : 'Zoe Williams', 'pic': 'img/post-img/profile7.avif', 'num': 2, 'desc': 'Cuisine Chronicles', 'firstImg': 'img/post-img/10.avif', 'secImg': 'img/post-img/11.avif', 'totalPic': 12}); -%>
+                <%- include('post', {'username' : 'Luna Rivera', 'pic': 'img/post-img/profile8.avif', 'num': 6, 'desc': 'Foodie Finds', 'firstImg': 'img/post-img/12.avif', 'secImg': 'img/post-img/13.avif', 'totalPic': 3}); -%>
+                <%- include('review', {'username' : 'Leo Chang', 'pic': 'img/post-img/profile9.avif', 'desc': 'Feast Frenzy', 'reviewImg': 'img/post-img/review03.avif'}); -%>
+            </div>
+
+            <h4>
+                <img src="img/down-blue.svg" >
+                <a href="">Show more activity</a>
+            </h4>
+        </section>
+
+        <section class="category">
+            <h3>Categories</h3>
+            <div class="category-container">
+                <div>
+                    <img src="img/restaurant.svg" alt="">
+                    <h4>Restaurant</h4>
+                </div>
+                <div>
+                    <img src="img/gift.svg" alt="">
+                    <h4>Shopping</h4>
+                </div>
+                <div>
+                    <img src="img/night.svg" alt="">
+                    <h4>Nightlife</h4>
+                </div>
+                <div>
+                    <img src="img/arrow.svg" alt="">
+                    <h4>Active Life</h4>
+                </div>
+                <div>
+                    <img src="img/beauty.svg" alt="">
+                    <h4>Beauty & Spas</h4>
+                </div>
+                <div>
+                    <img src="img/car.svg" alt="">
+                    <h4>Automotive</h4>
+                </div>
+                <div>
+                    <img src="img/home.svg" alt="">
+                    <h4>Home Services</h4>
+                </div>
+                <div>
+                    <img src="img/more.svg" alt="">
+                    <h4>More</h4>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <%- include('footer'); -%>
+        </footer>
+    </main>
+
+    <script>
+        // Array of background image URLs
+        const images = [
+            "img/hero-image.jpg",
+            "img/hero-image2.jpg",
+            "img/hero-image3.jpg",
+            "img/hero-image4.jpg"
+        ];
+
+        // Array of Heading Text
+        const headingText = [
+            'Nothing like a new <br>coat of paint',
+            'Praiseworthy pasta',
+            'Time for a tune-up?',
+            'Get a deep clean'
+        ]
+
+        // Array of Heading Text
+        const buttonText = [
+            '<img src="img/search.svg"> Painters',
+            '<img src="img/search.svg"> Italian',
+            '<img src="img/search.svg"> Auto repair',
+            '<img src="img/search.svg"> Cleaners'
+        ]
+
+        let currentImageIndex = 0;
+        let backgroundElement = document.getElementById("background");
+
+        
+        // Function to change background image with fade transition
+        function changeBackground() {
+            // Fade out
+            backgroundElement.style.opacity = 0.8;
+            
+            // Change background image
+            setTimeout(function() {
+                backgroundElement.style.backgroundImage = "url('" + images[currentImageIndex] + "')";
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                
+                setTimeout(function() {
+                    backgroundElement.style.opacity = 1;
+                }, 1000);
+            }, 1000);
+        }
+
+        let currentHeadingIndex = 0;
+        let headingElement = document.getElementById('heading');
+
+        // Function to change heading
+        function changeHeading() {
+
+            // Change background image
+            setTimeout(function() {
+                headingElement.innerHTML = headingText[currentHeadingIndex];
+                currentHeadingIndex = (currentHeadingIndex + 1) % headingText.length;
+            }, 1000);
+        }
+        
+        let currentButtonIndex = 0;
+        let buttonElement = document.getElementById('heading-btn');
+        
+        // Function to change heading
+        function changeButton() {
+
+            // Change background image
+            setTimeout(function() {
+                buttonElement.innerHTML = buttonText[currentButtonIndex];
+                currentButtonIndex = (currentButtonIndex + 1) % buttonText.length;
+            }, 1000);
+        }
+        // Initial call
+        changeBackground();
+        changeHeading();
+        changeButton();
+
+        // Set interval to change background image
+        setInterval(changeBackground, 5000); // Change image every 5 seconds
+        setInterval(changeHeading, 5000); // Change image every 5 seconds
+        setInterval(changeButton, 5000); // Change image every 5 seconds
+    </script>
+</body>
+</html>
+

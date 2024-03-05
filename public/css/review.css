@@ -1,0 +1,72 @@
+.box {
+  height: 400px;
+  padding: 20px;
+  border: 1px solid #bababa83;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.review {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 78%;
+  width: 100%;
+}
+
+.review figure {
+  height: 100px;
+}
+
+.review figure img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.review .review-desc {
+  padding: 20px 26px;
+}
+
+.review .review-desc h3 {
+  font-size: 16px;
+  color: #027a97;
+  margin-block-end: 10px;
+}
+
+.review .review-desc p {
+  height: 58px;
+  margin-block-start: 5px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 1550px) {
+  .review .review-desc p{
+    overflow-y: hidden;
+  }
+}
+
+.review .opinion {
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+}
+
+.review .opinion .opinion-icons {
+  margin-inline-start: 27px;
+  padding-inline-start: 5px;
+  width: 86%;
+  height: 100%;
+  border-top: 1px solid rgba(128, 128, 128, 0.352);
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.review .opinion .opinion-icons img {
+  width: 26px;
+  height: 26px;
+}

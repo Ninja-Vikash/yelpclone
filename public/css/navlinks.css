@@ -1,0 +1,18 @@
+.navlink {
+  display: flex;
+  max-width: 74vw;
+  margin: auto;
+  color: white;
+  gap: 20px;
+}
+
+.navlink li {
+    cursor: pointer;
+  list-style: none;
+  font-size: 14px;
+}
+
+.navlink li img {
+  position: relative;
+  top: 4px;
+}
